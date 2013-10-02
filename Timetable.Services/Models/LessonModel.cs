@@ -16,6 +16,9 @@ namespace Timetable.Services.Models
         [DataMember(Name = "subject")]
         public string Subject { get; set; }
 
+        [DataMember(Name = "subjectColor")]
+        public string SubjectColor { get; set; }
+
         [DataMember(Name = "day")]
         public string Day { get; set; }
 
@@ -58,6 +61,7 @@ namespace Timetable.Services.Models
             {
                 Id = lesson.Id,
                 Subject = lesson.Subject.Name,
+                SubjectColor = lesson.Subject.Color,
                 Room = lesson.Room,
                 Day = lesson.Day,
                 DayNumber = lesson.DayNumber,
@@ -77,6 +81,7 @@ namespace Timetable.Services.Models
                           {
                               Id = l.Id,
                               Subject = l.Subject.Name,
+                              SubjectColor = l.Subject.Color,
                               Room = l.Room,
                               Day = l.Day,
                               DayNumber = l.DayNumber,
