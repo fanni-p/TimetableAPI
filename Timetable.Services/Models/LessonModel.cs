@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Runtime.Serialization;
 using Timetable.Models;
@@ -35,7 +34,7 @@ namespace Timetable.Services.Models
         public LessonType Type { get; set; }
 
         [DataMember(Name = "room")]
-        public int Room { get; set; }
+        public string Room { get; set; }
 
         [DataMember(Name = "note")]
         public string Note { get; set; }

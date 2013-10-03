@@ -20,7 +20,7 @@ namespace Timetable.Models
 
         public LessonType Type { get; set; }
 
-        public int Room { get; set; }
+        public string Room { get; set; }
 
         public string Note { get; set; }
     }
