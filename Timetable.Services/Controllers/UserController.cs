@@ -64,15 +64,15 @@ namespace Timetable.Services.Controllers
             {
                 if (model == null)
                 {
-                    throw new FormatException("invalid username and/or password");
+                    throw new FormatException("Invalid username and/or password");
                 }
 
                 this.ValidateAuthCode(model.AuthCode);
                 this.ValidateUsername(model.Username);
 
                 var context = new TimetableContext();
-                var username = model.Username.ToLower();
-                var user = context.Users.FirstOrDefault(u => u.Username == username);
+                var authCode = model.AuthCode;
+                var user = context.Users.FirstOrDefault(u => u.AuthenticationCode == authCode);
 
                 if (user == null)
                 {
